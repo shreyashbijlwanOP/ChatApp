@@ -1,38 +1,81 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scrollbar-width: none;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+::-webkit-scrollbar {
+  display: none;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.fs-10 {
+  font-size: 15px !important;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.bg-light-grey {
+  background-color: rgb(175, 227, 249) !important;
+}
+.header {
+  height: 85px;
+}
+.border-grey {
+  width: 95%;
+  margin: auto;
+  height: 1px;
+  background-color: rgb(189, 189, 189);
+}
+.main {
+  height: calc(100vh - 145px);
+  overflow: hidden;
   display: flex;
+
   flex-direction: column;
+  justify-content: flex-end;
+  scroll-behavior: smooth;
+}
+.input-area {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  gap: 10px;
+}
+.msg-box {
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+.dummy-box {
+  width: 100%;
+  height: 4px;
+  /* background-colo: red; */
+}
+.avatar {
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+.avatar-text {
+  font-weight: 500;
   color: white;
 }
+.msg,
+.user-details {
+  display: flex;
+  gap: 10px;
 
-.App-link {
-  color: #61dafb;
+}
+.user-msg {
+  background-color: white;
+  padding: 8px 10px ;
+  overflow-wrap: break-word;
+  width: max-content;
+  max-width: 220px;
+  border-radius:  0px 15px 15px 15px  ;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.msg-time{
+  font-size: 12px;
+  color: gray;
+  align-self: flex-end;
+}
+.msg-like{
+align-self: center;
+color: rgb(246, 195, 67);
 }
