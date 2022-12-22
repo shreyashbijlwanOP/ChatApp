@@ -14,7 +14,7 @@ const Model = () => {
         return `${newText} ${name}` 
       })
     }
-    console.log(searchText);
+    // console.log(searchText);
   return (
     <div className='model rounded shadow'>
         {user_list.filter(user =>user.toLowerCase().includes(searchText.toLowerCase())).map(user=> (<li 

@@ -5,7 +5,9 @@ import { useMsgContext } from '../Context/Context'
 const Msg = (props) => {
     let {dispatch} = useMsgContext()
     let {msg} = props
-    
+    const user_list = ["Alan", "Bob", "Carol", "Dean", "Elin"]
+    let current = user_list.find(user=> msg.msg.includes(user))
+    let [msgStart,msgEnd] = msg.msg.split(current)
   return (
     <div className='msg my-3'>
     <div className='avatar' style={{backgroundColor:'#'+ msg.frameColor,width:"50px",height:"50px",borderRadius:"50px", border:"2px solid white"}}>
@@ -17,7 +19,8 @@ const Msg = (props) => {
         <div className="msg-time">{msg.time}</div>
         </div>
     <p className="user-msg ms-2 my-2">
-        {msg.msg}
+
+        {msgStart} <span style={{color:"blue"}} >{(current ??"")}</span>{( msgEnd ??"")} 
     </p>
     </div>
     <div className="msg-like ms-auto me-3">
