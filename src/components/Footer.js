@@ -20,7 +20,7 @@ const Footer = () => {
         type:"send",
         payload:{
             msg: text,
-            user: user_list[Math.floor(Math.random() * user_list.length) ],
+            user: user_list[Math.floor(Math.random() * user_list.length)],
             frameColor: Math.floor(Math.random()*12345699).toString(16),
             likes:0,
             id: faker.datatype.uuid(),

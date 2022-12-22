@@ -1,7 +1,7 @@
 import { faker } from '@faker-js/faker'
 import React, { createContext, useContext, useReducer, useState } from 'react'
 import MsgReducer from './MsgReducer'
-
+import PropTypes from 'prop-types'; 
 let MsgContext = createContext(null)
 
 
@@ -26,6 +26,11 @@ const Context = ({children}) => {
 
 export function useMsgContext(){
 return useContext(MsgContext)
+}
+
+
+Context.propTypes ={
+  children: PropTypes.object.isRequired
 }
 
 export default Context

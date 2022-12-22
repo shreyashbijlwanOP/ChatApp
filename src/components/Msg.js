@@ -1,7 +1,7 @@
 import React from 'react'
 import { AiFillLike } from 'react-icons/ai'
 import { useMsgContext } from '../Context/Context'
-
+import PropTypes from 'prop-types'; 
 const Msg = (props) => {
     let {dispatch} = useMsgContext()
     let {msg} = props
@@ -35,6 +35,10 @@ const Msg = (props) => {
     
     </div>
   )
+}
+
+Msg.propTypes ={
+    msg: PropTypes.object.isRequired
 }
 
 export default Msg
