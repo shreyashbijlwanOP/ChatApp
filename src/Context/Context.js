@@ -1,5 +1,5 @@
 import { faker } from '@faker-js/faker'
-import React, { createContext, useContext, useReducer } from 'react'
+import React, { createContext, useContext, useReducer, useState } from 'react'
 import MsgReducer from './MsgReducer'
 
 let MsgContext = createContext(null)
@@ -7,6 +7,7 @@ let MsgContext = createContext(null)
 
 
 const Context = ({children}) => {
+  let [text, setText] = useState("");
     let [msgList,dispatch] = useReducer(MsgReducer,[{
         msg: "hello",
             user: "Shreyash bijlwan",
@@ -17,7 +18,7 @@ const Context = ({children}) => {
 
     }])
   return (
-    <MsgContext.Provider value={{msgList,dispatch}}>
+    <MsgContext.Provider value={{msgList,dispatch,text, setText}}>
     {children}
     </MsgContext.Provider>
   )
